@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django.contrib.gis",  # enable geodjango
+    "service",
 ]
 
 MIDDLEWARE = [
@@ -81,16 +83,27 @@ WSGI_APPLICATION = 'mozio_test_project.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'moziouser',
+#         'PASSWORD': 'mozioPassword',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#         # 'HOST': 'db',
+#         # 'PORT': 5432,
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'moziouser',
-        'PASSWORD': 'mozioPassword',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-        # 'HOST': 'db',
-        # 'PORT': 5432,
+    "default": {
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": "mozio_service",
+        "USER": "mozious",
+        "PASSWORD": "moziopass",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
