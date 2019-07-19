@@ -3,8 +3,7 @@ from django.contrib import admin
 from .models import Provider, ServiceArea
 
 
-# Register your models here.
-
+# So I could see poly info inside admin page
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ('name', 'poly')
 

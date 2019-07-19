@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from .models import *
 from .serializers import *
 
-# ViewSets define the view behavior.
+# View to use API
 class ProviderViewSet(viewsets.ModelViewSet):
     queryset = Provider.objects.all()
     serializer_class = ProviderSerializer
