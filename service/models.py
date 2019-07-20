@@ -50,6 +50,7 @@ class ServiceArea(geomodels.Model):
 
     A Service Area is where the Provider provide their service
 
+
     :type provider: ForeignKey
     :param provider: the Provider of the Service Area
 
